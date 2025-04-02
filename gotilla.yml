@@ -5,7 +5,7 @@ resources:
   repositories:
     - repository: 'CICD' # Name of the repository
       type: github # github for GitHub repo's git for ADO repo's
-      endpoint: PO_API # name of the ado service connection
+      endpoint: Davin-NBA # name of the ado service connection
       name: 'Davin-NBA/CICD' # org/repo
 
 # Controls when the workflow will run
