@@ -3,7 +3,7 @@ resources:
     - repository: CICD
       type: git
       name: 'Davin-NBA/CICD'  # Name of the Build repository
-      endpoint: connection # Name of the service connection
+      endpoint: 'Davin-NBA' # Name of the service connection
 
 stages:
 - stage: InheritStage
