@@ -1,20 +1,11 @@
-# This is a basic workflow to help you get started with Actions
-
-name: CIBuild
 resources:
   repositories:
-    - repository: 'CICD' # Name of the repository
-      type: github # github for GitHub repo's git for ADO repo's
-      endpoint: 'Davin-NBA' # name of the ado service connection
-      name: 'Davin-NBA/CICD' # org/repo
+    - repository: CICD
+      type: git
+      name: 'Davin-NBA/CICD'  # Name of the Build repository
+      endpoint: connection # Name of the service connection
 
-# Controls when the workflow will run
-trigger:
-    branches: 
-      include: 
-        - 'main' 
-
-# A workflow run is made up of one or more jobs that can run sequentially or in parallel
-jobs:
-  - template: template/template.yml@CICD
-
+stages:
+- stage: InheritStage
+  jobs:
+  - template: template/template.yml@CICD  # Reference gaming.yml from the Build repository
